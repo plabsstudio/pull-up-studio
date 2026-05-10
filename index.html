@@ -801,32 +801,36 @@
     <p class="section-sub">Completa el formulario y te confirmamos la reunion en menos de 24 horas. La sesion dura entre 15-20 minutos.</p>
 
     <div class="form-wrap">
-      <form id="diagnostico-form">
+      <form id="diagnostico-form" action="https://formsubmit.co/cataplab21@yahoo.com" method="POST">
+        <input type="hidden" name="_subject" value="Nuevo Diagnostico Digital - The Pull-Up Studio">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://plabsstudio.github.io/pull-up-studio/gracias.html">
         <div class="form-grid">
           <div class="form-group">
             <label for="nombre">Nombre completo *</label>
-            <input type="text" id="nombre" placeholder="Juan Perez" required />
+            <input type="text" id="nombre" name="Nombre" placeholder="Juan Perez" required />
           </div>
           <div class="form-group">
             <label for="empresa">Empresa / Negocio *</label>
-            <input type="text" id="empresa" placeholder="Mi empresa SpA" required />
+            <input type="text" id="empresa" name="Empresa" placeholder="Mi empresa SpA" required />
           </div>
           <div class="form-group">
             <label for="email">Correo electronico *</label>
-            <input type="email" id="email" placeholder="tu@correo.com" required />
+            <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
           </div>
           <div class="form-group">
             <label for="telefono">WhatsApp / Telefono *</label>
-            <input type="tel" id="telefono" placeholder="+56 9 1234 5678" required />
+            <input type="tel" id="telefono" name="Telefono" placeholder="+56 9 1234 5678" required />
           </div>
           <div class="datetime-row">
             <div class="form-group">
               <label for="fecha">Fecha preferida *</label>
-              <input type="date" id="fecha" required />
+              <input type="date" id="fecha" name="Fecha_preferida" required />
             </div>
             <div class="form-group">
               <label for="hora">Hora preferida *</label>
-              <select id="hora" required>
+              <select id="hora" name="Hora_preferida" required>
                 <option value="">Selecciona un horario</option>
                 <option>09:00 - 09:20</option>
                 <option>09:30 - 09:50</option>
@@ -849,7 +853,7 @@
           </div>
           <div class="form-group full">
             <label for="mensaje">Cuentanos de tu negocio (opcional)</label>
-            <textarea id="mensaje" placeholder="Breve descripcion de tu negocio, tus redes actuales, o cualquier contexto que nos ayude a preparar mejor tu diagnostico..."></textarea>
+            <textarea id="mensaje" name="Mensaje" placeholder="Breve descripcion de tu negocio, tus redes actuales, o cualquier contexto que nos ayude a preparar mejor tu diagnostico..."></textarea>
           </div>
         </div>
 
