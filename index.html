@@ -813,100 +813,63 @@
     <p class="section-sub">Completa el formulario y te confirmamos la reunion en menos de 24 horas. La sesion dura entre 15-20 minutos.</p>
 
     <div class="form-wrap">
-      <!--
-        CONFIGURACION DE CORREO AUTOMATICO
-        ====================================
-        Este formulario usa Web3Forms (gratuito, hasta 250 envios/mes).
-
-        Pasos para activarlo:
-        1. Ve a https://web3forms.com
-        2. Ingresa el correo donde quieres recibir los diagnosticos
-        3. Copia el "Access Key" que te envian
-        4. Reemplaza "TU_ACCESS_KEY_AQUI" en el input hidden de abajo
-
-        Cada vez que alguien complete el formulario, recibiras un correo
-        con todos los datos: nombre, empresa, servicio, fecha y hora elegida.
-      -->
-      <form id="diagnostico-form" action="https://api.web3forms.com/submit" method="POST">
-        <!-- Web3Forms config -->
-        <input type="hidden" name="access_key" value="TU_ACCESS_KEY_AQUI" />
-        <input type="hidden" name="subject" value="Nueva solicitud de Diagnostico Digital - The Pull-Up Studio" />
-        <input type="hidden" name="from_name" value="The Pull-Up Studio - Landing" />
-        <input type="hidden" name="redirect" value="false" />
-        <input type="hidden" name="botcheck" value="" style="display:none;" />
-
+      <form id="diagnostico-form">
         <div class="form-grid">
           <div class="form-group">
             <label for="nombre">Nombre completo *</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Juan Perez" required />
+            <input type="text" id="nombre" placeholder="Juan Perez" required />
           </div>
           <div class="form-group">
             <label for="empresa">Empresa / Negocio *</label>
-            <input type="text" id="empresa" name="empresa" placeholder="Mi empresa SpA" required />
+            <input type="text" id="empresa" placeholder="Mi empresa SpA" required />
           </div>
           <div class="form-group">
             <label for="email">Correo electronico *</label>
-            <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+            <input type="email" id="email" placeholder="tu@correo.com" required />
           </div>
           <div class="form-group">
             <label for="telefono">WhatsApp / Telefono *</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678" required />
-          </div>
-          <div class="form-group full">
-            <label for="servicio">Servicio de interes</label>
-            <select id="servicio" name="servicio">
-              <option value="">Aun no lo se (el diagnostico me ayudara)</option>
-              <option value="Social Launch">Social Launch — $570.000 CLP</option>
-              <option value="Ads Launch">Ads Launch — $650.000 CLP</option>
-              <option value="Web Launch">Web Launch — desde $400.000 CLP</option>
-              <option value="Full Pull">Full Pull (paquete completo) — $1.300.000 CLP</option>
-              <option value="Add-on">Solo un Add-on</option>
-            </select>
+            <input type="tel" id="telefono" placeholder="+56 9 1234 5678" required />
           </div>
           <div class="datetime-row">
             <div class="form-group">
               <label for="fecha">Fecha preferida *</label>
-              <input type="date" id="fecha" name="fecha_preferida" required />
+              <input type="date" id="fecha" required />
             </div>
             <div class="form-group">
               <label for="hora">Hora preferida *</label>
-              <select id="hora" name="hora_preferida" required>
+              <select id="hora" required>
                 <option value="">Selecciona un horario</option>
-                <option>09:00 — 09:20</option>
-                <option>09:30 — 09:50</option>
-                <option>10:00 — 10:20</option>
-                <option>10:30 — 10:50</option>
-                <option>11:00 — 11:20</option>
-                <option>11:30 — 11:50</option>
-                <option>12:00 — 12:20</option>
-                <option>12:30 — 12:50</option>
-                <option>14:00 — 14:20</option>
-                <option>14:30 — 14:50</option>
-                <option>15:00 — 15:20</option>
-                <option>15:30 — 15:50</option>
-                <option>16:00 — 16:20</option>
-                <option>16:30 — 16:50</option>
-                <option>17:00 — 17:20</option>
-                <option>17:30 — 17:50</option>
+                <option>09:00 - 09:20</option>
+                <option>09:30 - 09:50</option>
+                <option>10:00 - 10:20</option>
+                <option>10:30 - 10:50</option>
+                <option>11:00 - 11:20</option>
+                <option>11:30 - 11:50</option>
+                <option>12:00 - 12:20</option>
+                <option>12:30 - 12:50</option>
+                <option>14:00 - 14:20</option>
+                <option>14:30 - 14:50</option>
+                <option>15:00 - 15:20</option>
+                <option>15:30 - 15:50</option>
+                <option>16:00 - 16:20</option>
+                <option>16:30 - 16:50</option>
+                <option>17:00 - 17:20</option>
+                <option>17:30 - 17:50</option>
               </select>
             </div>
           </div>
           <div class="form-group full">
             <label for="mensaje">Cuentanos de tu negocio (opcional)</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Breve descripcion de tu negocio, tus redes actuales, o cualquier contexto que nos ayude a preparar mejor tu diagnostico..."></textarea>
+            <textarea id="mensaje" placeholder="Breve descripcion de tu negocio, tus redes actuales, o cualquier contexto que nos ayude a preparar mejor tu diagnostico..."></textarea>
           </div>
         </div>
 
-        <p class="form-note" style="margin-bottom:20px;">* Campos obligatorios. Te confirmamos la reunion por correo y WhatsApp en menos de 24 hrs.</p>
-        <button type="submit" class="btn-submit" id="submit-btn">
+        <p class="form-note" style="margin-bottom:20px;">* Campos obligatorios. Se abrira tu cliente de correo con todo pre-llenado.</p>
+        <button type="submit" class="btn-submit">
           Solicitar Diagnostico Digital GRATIS
         </button>
       </form>
-
-      <div id="success-msg">
-        <h3>Solicitud recibida</h3>
-        <p>Gracias por tu interes. El equipo de The Pull-Up Studio te contactara en menos de 24 horas para confirmar tu sesion de diagnostico. Revisa tu correo (y el spam por si acaso).</p>
-      </div>
     </div>
   </div>
 </section>
@@ -922,55 +885,44 @@
 </footer>
 
 <script>
-  // Bloquear fechas pasadas en el selector
-  (function () {
-    const fechaInput = document.getElementById('fecha');
-    const hoy = new Date();
-    const yyyy = hoy.getFullYear();
-    const mm   = String(hoy.getMonth() + 1).padStart(2, '0');
-    const dd   = String(hoy.getDate()).padStart(2, '0');
-    fechaInput.min = `${yyyy}-${mm}-${dd}`;
-
-    // Bloquear fines de semana
-    fechaInput.addEventListener('input', function () {
-      const d = new Date(this.value + 'T12:00:00');
-      const day = d.getDay();
-      if (day === 0 || day === 6) {
-        this.setCustomValidity('Por favor elige un dia de semana (lunes a viernes).');
-        this.reportValidity();
-        this.value = '';
-      } else {
-        this.setCustomValidity('');
-      }
-    });
-  })();
-
-  // Envio AJAX del formulario (sin redirección)
-  document.getElementById('diagnostico-form').addEventListener('submit', async function (e) {
-    e.preventDefault();
-    const btn = document.getElementById('submit-btn');
-    btn.textContent = 'Enviando...';
-    btn.disabled = true;
-
-    const data = new FormData(this);
-    try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: data
-      });
-      const json = await res.json();
-      if (json.success) {
-        this.style.display = 'none';
-        document.getElementById('success-msg').style.display = 'block';
-        window.scrollTo({ top: document.getElementById('success-msg').offsetTop - 100, behavior: 'smooth' });
-      } else {
-        btn.textContent = 'Error al enviar. Intenta de nuevo.';
-        btn.disabled = false;
-      }
-    } catch {
-      btn.textContent = 'Error de conexion. Intenta de nuevo.';
-      btn.disabled = false;
+  // Bloquear fechas pasadas y fines de semana
+  const fechaInput = document.getElementById('fecha');
+  const hoy = new Date();
+  fechaInput.min = hoy.toISOString().split('T')[0];
+  fechaInput.addEventListener('input', function () {
+    const d = new Date(this.value + 'T12:00:00');
+    if (d.getDay() === 0 || d.getDay() === 6) {
+      this.setCustomValidity('Elige un dia de semana (lunes a viernes).');
+      this.reportValidity();
+      this.value = '';
+    } else {
+      this.setCustomValidity('');
     }
+  });
+
+  // Envio via mailto
+  document.getElementById('diagnostico-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const nombre  = document.getElementById('nombre').value.trim();
+    const empresa = document.getElementById('empresa').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const telefono= document.getElementById('telefono').value.trim();
+    const fecha   = document.getElementById('fecha').value;
+    const hora    = document.getElementById('hora').value;
+    const mensaje = document.getElementById('mensaje').value.trim();
+
+    const asunto = encodeURIComponent('Solicitud Diagnostico Digital - ' + nombre);
+    const cuerpo = encodeURIComponent(
+      'Nombre: ' + nombre + '\n' +
+      'Empresa: ' + empresa + '\n' +
+      'Correo: ' + email + '\n' +
+      'Telefono: ' + telefono + '\n' +
+      'Fecha preferida: ' + fecha + '\n' +
+      'Hora preferida: ' + hora + '\n\n' +
+      'Mensaje:\n' + (mensaje || '(sin mensaje)')
+    );
+
+    window.location.href = 'mailto:cataplab21@yahoo.com?subject=' + asunto + '&body=' + cuerpo;
   });
 </script>
 
