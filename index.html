@@ -891,31 +891,6 @@
       this.setCustomValidity('');
     }
   });
-
-  // Envio via mailto
-  document.getElementById('diagnostico-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    const nombre  = document.getElementById('nombre').value.trim();
-    const empresa = document.getElementById('empresa').value.trim();
-    const email   = document.getElementById('email').value.trim();
-    const telefono= document.getElementById('telefono').value.trim();
-    const fecha   = document.getElementById('fecha').value;
-    const hora    = document.getElementById('hora').value;
-    const mensaje = document.getElementById('mensaje').value.trim();
-
-    const asunto = encodeURIComponent('Solicitud Diagnostico Digital - ' + nombre);
-    const cuerpo = encodeURIComponent(
-      'Nombre: ' + nombre + '\n' +
-      'Empresa: ' + empresa + '\n' +
-      'Correo: ' + email + '\n' +
-      'Telefono: ' + telefono + '\n' +
-      'Fecha preferida: ' + fecha + '\n' +
-      'Hora preferida: ' + hora + '\n\n' +
-      'Mensaje:\n' + (mensaje || '(sin mensaje)')
-    );
-
-    window.location.href = 'mailto:cataplab21@yahoo.com?subject=' + asunto + '&body=' + cuerpo;
-  });
 </script>
 
 </body>
